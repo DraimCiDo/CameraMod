@@ -14,14 +14,11 @@ namespace CameraMod.Paches
         [HarmonyPatch("Update")]
         [HarmonyPostfix]
 
-        static void infiniteSprintPatch(ref float ___sprintMeter)
+        static void modifyspeedmovementPatch(ref float ___climbSpeed, ref float ___sprintMeter, ref float ___sprintMultiplier)
         {
+            ___climbSpeed = 10f;
             ___sprintMeter = 1f;
-        }
-
-        static void modifyspeedmovementPatch(ref float ___movementSpeed)
-        {
-            ___movementSpeed = 10f;
+            ___sprintMultiplier = 3f;
 
         }
 

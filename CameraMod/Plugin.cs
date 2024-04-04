@@ -32,7 +32,7 @@ namespace CameraMod
 
             mls = BepInEx.Logging.Logger.CreateLogSource(modGUID);
 
-            mls.LogInfo("Мод CameraMod успешно запущен.");
+            mls.LogInfo("Мод {modGUID} успешно запущен.");
             
             harmony.PatchAll(typeof(CameraModBase));
             harmony.PatchAll(typeof(PlayerControllerBPatch));
